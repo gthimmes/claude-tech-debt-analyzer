@@ -2,41 +2,39 @@
 
 ## Overview
 
-This is a Claude Code skill that leverages Claude's native AI to analyze codebases for technical debt and translate findings into quantified business impact.
+This is a Claude Code plugin that leverages Claude's native AI to analyze codebases for technical debt and translate findings into quantified business impact.
 
-**Important:** This skill runs within Claude Code. Claude analyzes your code directly using its understanding - no API keys or external services required.
+**Important:** This plugin runs within Claude Code. Claude analyzes your code directly using its understanding - no API keys or external services required.
 
 ## Installation
 
-### Via URL (Recommended)
+### Step 1: Add the Marketplace
 
 In Claude Code:
 ```bash
-/install https://github.com/yourusername/claude-tech-debt-analyzer
+/plugin marketplace add gthimmes/claude-tech-debt-analyzer
 ```
 
-### Manual Installation
+### Step 2: Install the Plugin
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/claude-tech-debt-analyzer.git
-   ```
-
-2. Copy to Claude Code skills directory:
-   ```bash
-   cp -r claude-tech-debt-analyzer ~/.claude/skills/
-   ```
-
-3. Restart Claude Code (if needed)
+```bash
+/plugin install claude-tech-debt-analyzer
+```
 
 ## Usage
 
 ### Basic Analysis
 
-Analyze a repository and generate a comprehensive report:
+Ask Claude to analyze a repository:
 
-```bash
-/claude-tech-debt-analyzer analyze /path/to/your/repo
+```
+Analyze my codebase for technical debt
+```
+
+Or specify a path:
+
+```
+Analyze /path/to/your/repo for technical debt
 ```
 
 **What happens:**
@@ -46,16 +44,16 @@ Analyze a repository and generate a comprehensive report:
 4. Claude generates an executive-friendly markdown report
 5. Report is saved to `/path/to/your/repo/tech-debt-analysis/tech-debt-report.md`
 
-### Analyze Current Directory
-
-```bash
-/claude-tech-debt-analyzer analyze .
-```
-
 ### Analyze Specific Module
 
-```bash
-/claude-tech-debt-analyzer analyze ./src/auth
+```
+Analyze the authentication module for technical debt
+```
+
+Or:
+
+```
+Check ./src/auth for code quality issues
 ```
 
 ## How Claude Analyzes Code
@@ -228,8 +226,8 @@ The same quality principles apply across languages:
 **Problem:** "How do I justify refactoring to executives?"
 
 **Solution:**
-```bash
-/claude-tech-debt-analyzer analyze .
+```
+Analyze my codebase for technical debt
 ```
 
 Share the report showing:
@@ -266,27 +264,24 @@ Share the report showing:
 ### Focusing on Specific Areas
 
 Analyze just your authentication code:
-```bash
-/claude-tech-debt-analyzer analyze ./src/auth
+```
+Analyze ./src/auth for technical debt
 ```
 
 Analyze payment processing:
-```bash
-/claude-tech-debt-analyzer analyze ./src/payments
+```
+Check the payments module for code quality issues
 ```
 
 ### Tracking Improvement
 
 Run analysis quarterly:
-```bash
-# Q1
-/claude-tech-debt-analyzer analyze . > q1-report.md
-
-# Q2 (after refactoring)
-/claude-tech-debt-analyzer analyze . > q2-report.md
+```
+# Q1: Analyze my codebase for technical debt
+# Q2 (after refactoring): Analyze my codebase again for technical debt
 ```
 
-Compare scores to track improvement.
+Reports are saved to `tech-debt-analysis/tech-debt-report.md`. Save previous reports to compare scores and track improvement.
 
 ### Custom Cost Models
 
@@ -317,18 +312,19 @@ Your code never leaves your environment.
 
 ## Troubleshooting
 
-### "Skill not found"
+### "Plugin not found"
 
 Make sure you've installed it:
 ```bash
-/install https://github.com/yourusername/claude-tech-debt-analyzer
+/plugin marketplace add gthimmes/claude-tech-debt-analyzer
+/plugin install claude-tech-debt-analyzer
 ```
 
 ### "No files analyzed"
 
-Check the repository path:
-```bash
-/claude-tech-debt-analyzer analyze /full/path/to/repo
+Make sure you're in a directory with source files, or specify the path:
+```
+Analyze /full/path/to/repo for technical debt
 ```
 
 ### "Report not generated"
@@ -398,7 +394,7 @@ Executive: "Approved."
 
 - **How does this work?** Check [README.md](README.md)
 - **Quick example?** See [QUICKSTART.md](QUICKSTART.md)
-- **Claude's instructions?** Read [SKILL.md](SKILL.md)
+- **Claude's instructions?** Read [skills/tech-debt-analyzer/SKILL.md](skills/tech-debt-analyzer/SKILL.md)
 
 ---
 

@@ -1,3 +1,9 @@
+---
+name: tech-debt-analyzer
+description: Analyze codebases for technical debt and translate findings into business impact with ROI calculations. Use when user asks to analyze tech debt, code quality, or wants to quantify technical debt in dollars.
+allowed-tools: Read, Grep, Glob, Bash, Write, Task
+---
+
 # Claude Tech Debt Analyzer
 
 A Claude Code skill that analyzes codebases for technical debt and translates findings into business impact.
@@ -9,14 +15,6 @@ When invoked, you (Claude) will:
 2. Analyze code files for technical debt using your understanding of software quality
 3. Calculate business impact in dollars (delivery drag, incident costs, onboarding friction)
 4. Generate an executive-friendly report with ROI calculations
-
-## Usage
-
-```bash
-/claude-tech-debt-analyzer analyze [path]
-```
-
-Analyzes the specified repository (or current directory) and generates a comprehensive technical debt report.
 
 ## How You Should Analyze Code
 
@@ -60,22 +58,22 @@ Provide specific, actionable improvements:
 
 ## Scoring Guidelines
 
-**0-30 (Low Risk - 🟢)**
+**0-30 (Low Risk)**
 - Clean, well-structured code
 - Easy to understand and modify
 - Good practices followed
 
-**30-60 (Moderate Risk - 🟡)**
+**30-60 (Moderate Risk)**
 - Some complexity or technical debt
 - Manageable but could be improved
 - Plan to address in next quarter
 
-**60-80 (High Risk - 🟠)**
+**60-80 (High Risk)**
 - Significant technical debt
 - Slowing down development
 - Should address within 1-2 months
 
-**80-100 (Critical Risk - 🔴)**
+**80-100 (Critical Risk)**
 - Severe technical debt
 - High risk of incidents
 - Immediate action needed
@@ -86,7 +84,7 @@ Use these formulas to translate technical debt into dollars:
 
 ### Delivery Drag
 - Team slower by X% due to bad code
-- Annual cost = Team size × Working days × Hours/day × Hourly rate × X%
+- Annual cost = Team size x Working days x Hours/day x Hourly rate x X%
 
 ### Incident Risk
 - Higher debt score = more likely to cause production issues
@@ -95,8 +93,8 @@ Use these formulas to translate technical debt into dollars:
 
 ### Onboarding Friction
 - Complex code = longer ramp-up time for new engineers
-- Extra days = Debt score / 10 × 5 days
-- Cost = Extra days × Hourly rate × 1.5 (includes mentoring)
+- Extra days = Debt score / 10 x 5 days
+- Cost = Extra days x Hourly rate x 1.5 (includes mentoring)
 
 ## Output Format
 
@@ -160,11 +158,11 @@ Apply the same quality principles across all languages:
 
 When explaining technical concepts, use analogies:
 
-- **Cyclomatic complexity** → "Like a maze with many paths - more ways for bugs to hide"
-- **Tight coupling** → "Like dominoes - change one thing, five others fall"
-- **Code duplication** → "Same paragraph in five book chapters - fix typo in all five"
-- **God class** → "Swiss Army knife doing everything poorly instead of one thing well"
-- **Technical debt** → "Credit card debt - borrow now, pay interest forever"
+- **Cyclomatic complexity**: "Like a maze with many paths - more ways for bugs to hide"
+- **Tight coupling**: "Like dominoes - change one thing, five others fall"
+- **Code duplication**: "Same paragraph in five book chapters - fix typo in all five"
+- **God class**: "Swiss Army knife doing everything poorly instead of one thing well"
+- **Technical debt**: "Credit card debt - borrow now, pay interest forever"
 
 ## Configuration
 

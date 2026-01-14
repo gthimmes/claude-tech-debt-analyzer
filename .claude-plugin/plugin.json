@@ -1,0 +1,13 @@
+{
+  "name": "claude-tech-debt-analyzer",
+  "version": "1.0.0",
+  "description": "AI-powered technical debt analysis that translates code quality issues into business impact with ROI calculations",
+  "author": {
+    "name": "gthimmes"
+  },
+  "homepage": "https://github.com/gthimmes/claude-tech-debt-analyzer",
+  "repository": "https://github.com/gthimmes/claude-tech-debt-analyzer",
+  "license": "MIT",
+  "keywords": ["technical-debt", "code-analysis", "roi", "business-impact", "code-quality"],
+  "skills": ["./skills/"]
+}

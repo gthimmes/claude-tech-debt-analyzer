@@ -13,37 +13,28 @@ This is a **Claude Code skill** - it runs inside Claude Code and uses **Claude's
 - ✅ **Any programming language** - Claude understands them all
 - ✅ **True AI analysis** - Not regex patterns, but actual code comprehension
 
-## 🚀 Installation
+## Installation
 
-### Install via URL in Claude Code (Recommended)
+### Step 1: Add the Marketplace
 
 ```bash
-/install https://github.com/gthimmes/claude-tech-debt-analyzer
+/plugin marketplace add gthimmes/claude-tech-debt-analyzer
 ```
 
-Once installed, use it directly in Claude Code:
+### Step 2: Install the Plugin
+
 ```bash
-/claude-tech-debt-analyzer analyze /path/to/your/repo
+/plugin install claude-tech-debt-analyzer
 ```
 
-### Manual Installation
+Once installed, Claude will automatically use this skill when you ask about technical debt analysis.
 
-1. Clone this repository
-2. Copy to your Claude Code skills directory:
-   ```bash
-   cp -r claude-tech-debt-analyzer ~/.claude/skills/
-   ```
-3. Use in Claude Code:
-   ```bash
-   /claude-tech-debt-analyzer analyze .
-   ```
-
-## ⚡ Quick Start
+## Quick Start
 
 **In Claude Code:**
 
 ```
-User: /claude-tech-debt-analyzer analyze /path/to/my/project
+User: Analyze my codebase for technical debt
 
 Claude: [Analyzes your codebase using AI]
         [Generates comprehensive report]
@@ -199,12 +190,11 @@ Claude will use these values to calculate business impact specific to your organ
 - **No API keys required**
 - **Your data stays yours**
 
-## 📚 Documentation
+## Documentation
 
-- **[SKILL.md](SKILL.md)** - Detailed instructions for Claude on how to analyze code
+- **[skills/tech-debt-analyzer/SKILL.md](skills/tech-debt-analyzer/SKILL.md)** - Instructions for Claude on how to analyze code
 - **[QUICKSTART.md](QUICKSTART.md)** - Get started in 30 seconds
 - **[USAGE-GUIDE.md](USAGE-GUIDE.md)** - Detailed usage guide
-- **[docs/skill-design-plan.md](docs/skill-design-plan.md)** - Original design document
 
 ## 🎯 Key Insight
 
@@ -253,12 +243,10 @@ See `docs/skill-design-plan.md` for the original vision and future enhancements.
 
 MIT License - use freely in your organization.
 
-## 🌟 Example Session
+## Example Session
 
 ```
-User: Can you analyze my codebase for technical debt?
-
-User: /claude-tech-debt-analyzer analyze ~/my-project
+User: Analyze my codebase for technical debt
 
 Claude: I'll analyze your codebase for technical debt using AI.
 
@@ -292,18 +280,21 @@ I've saved a detailed report to ~/my-project/tech-debt-analysis/tech-debt-report
 Would you like me to explain any of these findings in more detail?
 ```
 
-## 🚀 Get Started
+## Get Started
 
 ```bash
-# Install in Claude Code
-/install https://github.com/yourusername/claude-tech-debt-analyzer
+# Step 1: Add the marketplace
+/plugin marketplace add gthimmes/claude-tech-debt-analyzer
 
-# Use it
-/claude-tech-debt-analyzer analyze /path/to/your/repo
+# Step 2: Install the plugin
+/plugin install claude-tech-debt-analyzer
+
+# Step 3: Use it
+# Just ask Claude to analyze your code for technical debt!
 ```
 
 **Transform technical debt from feelings into data-driven decisions.**
 
 ---
 
-Built as a Claude Code skill that leverages Claude's native code understanding • No API keys required • Works with any programming language
+Built as a Claude Code plugin that leverages Claude's native code understanding - No API keys required - Works with any programming language

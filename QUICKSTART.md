@@ -2,26 +2,33 @@
 
 ## What Is This?
 
-A Claude Code skill that uses **Claude's AI** to analyze your codebase and quantify technical debt in business terms.
+A Claude Code plugin that uses **Claude's AI** to analyze your codebase and quantify technical debt in business terms.
 
 **Key Point:** This runs IN Claude Code. Claude analyzes your code directly using its understanding - no API keys, no external calls.
 
 ## Get Started in 30 Seconds
 
-### Step 1: Install the Skill
+### Step 1: Add the Marketplace
 
 In Claude Code:
 ```bash
-/install https://github.com/yourusername/claude-tech-debt-analyzer
+/plugin marketplace add gthimmes/claude-tech-debt-analyzer
 ```
 
-### Step 2: Run Analysis
+### Step 2: Install the Plugin
 
 ```bash
-/claude-tech-debt-analyzer analyze /path/to/your/repo
+/plugin install claude-tech-debt-analyzer
 ```
 
-### Step 3: Get Results
+### Step 3: Analyze Your Code
+
+Just ask Claude:
+```
+Analyze my codebase for technical debt
+```
+
+### Step 4: Get Results
 
 ```
 Overall AI Debt Score: 58/100 (MODERATE)
@@ -55,7 +62,7 @@ Plus a detailed markdown report saved to `tech-debt-analysis/tech-debt-report.md
 ## How It Works
 
 ```
-You: /claude-tech-debt-analyzer analyze ~/my-project
+You: Analyze my codebase for technical debt
 
 Claude: [Uses Read tool to examine source files]
         [Analyzes code using AI understanding]
@@ -109,23 +116,10 @@ organization:
 
 Claude will calculate costs specific to your team.
 
-## Commands
-
-```bash
-# Full analysis
-/claude-tech-debt-analyzer analyze /path/to/repo
-
-# Quick summary (future)
-/claude-tech-debt-analyzer summary
-
-# Explain term (future)
-/claude-tech-debt-analyzer explain "cyclomatic complexity"
-```
-
 ## Requirements
 
-- ✅ **Claude Code** installed
-- ✅ That's it! No API keys, no dependencies
+- Claude Code installed
+- That's it! No API keys, no dependencies
 
 ## Privacy
 
@@ -148,9 +142,11 @@ That's why it:
 ## Get Started Now
 
 ```bash
-/install https://github.com/yourusername/claude-tech-debt-analyzer
-/claude-tech-debt-analyzer analyze .
+/plugin marketplace add gthimmes/claude-tech-debt-analyzer
+/plugin install claude-tech-debt-analyzer
 ```
+
+Then just ask: "Analyze my codebase for technical debt"
 
 **Transform "the code is terrible" into "$1.2M/year in lost productivity"**
 
