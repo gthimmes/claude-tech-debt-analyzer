@@ -18,7 +18,7 @@ This is a **Claude Code skill** - it runs inside Claude Code and uses **Claude's
 ### Install via URL in Claude Code (Recommended)
 
 ```bash
-/install https://github.com/yourusername/claude-tech-debt-analyzer
+/install https://github.com/gthimmes/claude-tech-debt-analyzer
 ```
 
 Once installed, use it directly in Claude Code:
