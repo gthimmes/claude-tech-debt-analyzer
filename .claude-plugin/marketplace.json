@@ -10,7 +10,10 @@
   "plugins": [
     {
       "name": "claude-tech-debt-analyzer",
-      "source": ".",
+      "source": {
+        "source": "github",
+        "repo": "gthimmes/claude-tech-debt-analyzer"
+      },
       "description": "Analyzes codebases for technical debt and translates findings into business impact with ROI calculations",
       "version": "1.0.0",
       "author": {
