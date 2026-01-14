@@ -1,0 +1,41 @@
+# Tech Debt Analyzer Configuration
+# Customize these values for your organization
+
+organization:
+  name: "Your Company"
+  size: "mid"  # startup, mid, enterprise
+
+engineers:
+  count: 50
+  avg_salary: 150000
+  benefits_multiplier: 1.25  # 25% overhead for benefits, taxes, etc.
+  working_days_per_year: 220
+  working_hours_per_day: 8
+
+incidents:
+  avg_engineering_hours: 8
+  avg_revenue_impact: 5000
+  avg_customer_impact: 2000
+  p0_multiplier: 5.0  # Critical incidents cost 5x more
+  p1_multiplier: 2.0  # High priority incidents cost 2x more
+  p2_multiplier: 1.0  # Normal incidents
+
+onboarding:
+  baseline_days: 30  # Days for a well-maintained codebase
+  complexity_days_per_10_points: 5.0  # Extra days per 10 debt points
+
+# Thresholds for risk levels
+thresholds:
+  critical: 80  # Score >= 80 is critical
+  high: 60      # Score >= 60 is high
+  moderate: 30  # Score >= 30 is moderate
+  low: 0        # Score < 30 is low
+
+# Scoring weights (must sum to 1.0)
+scoring_weights:
+  complexity: 0.25
+  quality: 0.20
+  architecture: 0.15
+  maintenance: 0.15
+  test_coverage: 0.15
+  documentation: 0.10
